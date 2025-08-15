@@ -8,6 +8,10 @@ class RotatingContainerScreen extends StatefulWidget {
   State<RotatingContainerScreen> createState() => _RotatingContainerScreenState();
 }
 
+/*
+    In this example i will rotate the container 360 degrees in any direction like x-axis, y-axs and z-axis
+*/
+
 class _RotatingContainerScreenState extends State<RotatingContainerScreen> with SingleTickerProviderStateMixin{
 
   late AnimationController _controller;
@@ -46,6 +50,13 @@ class _RotatingContainerScreenState extends State<RotatingContainerScreen> with 
           builder: (context,child){
             return Transform(
               transform: Matrix4.identity()
+              /*
+              here we can rotate the container in any direction change
+              function and rotate according to you
+              ..rotateZ(_animation.value)  for z-axis
+              ..rotateX(_animation.value)  for x-axis
+              ..rotateY(_animation.value)  for y-axis
+              */
                 ..rotateZ(_animation.value),
               alignment: Alignment.center,
               child: Container(

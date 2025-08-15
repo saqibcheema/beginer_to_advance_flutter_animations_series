@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'Example1.dart';
+import 'Example2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const RotatingContainerScreen(),
+      home: const ClippedCircularAnimation(),
     );
   }
 }

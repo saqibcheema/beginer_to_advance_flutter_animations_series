@@ -70,7 +70,7 @@ class _ClippedCircularAnimationState extends State<ClippedCircularAnimation>
     _counterClockWiseRotationController = AnimationController(
       vsync: this,
       duration: Duration(seconds: 1),
-    );
+    )..forward();
 
     _counterClockWiseRotationAnimation =
         Tween<double>(begin: 0.0, end: -(pi / 2)).animate(
@@ -128,8 +128,6 @@ class _ClippedCircularAnimationState extends State<ClippedCircularAnimation>
 
   @override
   Widget build(BuildContext context) {
-
-    _counterClockWiseRotationController..forward();
 
     return Scaffold(
       body: SafeArea(

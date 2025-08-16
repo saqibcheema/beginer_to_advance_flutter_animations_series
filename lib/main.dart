@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Example1.dart';
 import 'Example2.dart';
+import 'Example3.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const ClippedCircularAnimation(),
+      home: const Example3(),
     );
   }
 }

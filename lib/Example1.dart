@@ -26,7 +26,7 @@ class _RotatingContainerScreenState extends State<RotatingContainerScreen> with 
       duration: Duration(seconds: 3)
     )..repeat();
 
-    _animation = Tween(begin: 0.0, end: 2* pi).animate(_controller);
+    _animation = Tween(begin: 0.0, end: 2 * pi).animate(_controller);
     _scaleAnimation = Tween(begin: 0.5, end: 1.5).animate(
         CurvedAnimation(parent: _controller, curve: Curves.easeInOut)
     );

@@ -64,7 +64,7 @@ class _CustomCircularProgressState extends State<CustomCircularProgress>
 
     _colorAnimation = ColorTween(
       begin: Colors.red,
-      end: Colors.blue,
+      end: Colors.teal,
     ).animate(_controller);
 
     _progressAnimation = Tween<double>(

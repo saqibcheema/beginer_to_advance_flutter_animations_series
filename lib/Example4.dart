@@ -33,9 +33,8 @@ class HeroAnimation extends StatelessWidget {
                       switch (flightDirection) {
 
                         case HeroFlightDirection.push:
-                          return Material(color: Colors.transparent,child: ScaleTransition(
-                              scale: animation.drive(Tween(begin: 0.0, end: 1.0).chain(CurveTween(curve: Curves.fastEaseInToSlowEaseOut))),
-                              child: toHeroContext.widget));
+                          return Material(color: Colors.transparent,
+                              child: toHeroContext.widget);
                         case HeroFlightDirection.pop:
                           return Material(color: Colors.transparent,child: fromHeroContext.widget);
                       }
@@ -65,15 +64,21 @@ class PersonDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Hero(
-          tag: person.name,
-          child: Text(person.emoji, style: TextStyle(fontSize: 40)),
-        ),
-        centerTitle: true,
+        title: Text(person.emoji, style: TextStyle(fontSize: 40)),
+        centerTitle: true
       ),
       body: Center(
         child: Column(
-          children: [Text(person.name), Text('${person.age} years old')],
+          children: [Text(person.name), Text('${person.age} years old'),
+          Hero(
+            tag: person.name,
+            child: Container(
+              height: 100,
+              width: 100,
+              child: Image.asset('assets/Images/flower.png'),
+            ),
+          )
+          ],
         ),
       ),
     );
@@ -93,4 +98,5 @@ List<Person> people = [
   Person(name: 'Jimi', emoji: '👨‍🎓', age: 18),
   Person(name: 'Ali', emoji: '👨', age: 18),
   Person(name: 'Jack', emoji: '👨‍🎓', age: 18),
+
 ];

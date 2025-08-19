@@ -15,7 +15,7 @@ class Example3 extends StatefulWidget {
 */
 
 class _Example3State extends State<Example3> with TickerProviderStateMixin {
-  final heightAndWidth = 100.0;
+  final heightAndWidth = 150.0;
   late AnimationController _xController;
   late AnimationController _yController;
   late AnimationController _zController;
@@ -116,12 +116,12 @@ class _Example3State extends State<Example3> with TickerProviderStateMixin {
                           ),
                         ),
 
-                         //Front Side of the 3d Box
-                         Container(
-                            width: heightAndWidth,
-                            height: heightAndWidth,
-                            color: Colors.green,
-                          ),
+                        //Front Side of the 3d Box
+                        Container(
+                          width: heightAndWidth,
+                          height: heightAndWidth,
+                          color: Colors.green,
+                        ),
                       ],
                     ),
                   );
